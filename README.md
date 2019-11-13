@@ -1,2 +1,2 @@
 # Image-classifier
-It is a website using tensorflow-serving to achieve image classifier
+这是在19届IT科技节上制作的一个小网站，其中使用了深度学习，可以像百度识图那样识别1000种类的物体。
