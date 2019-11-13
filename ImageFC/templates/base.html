@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Imageclassifier{% endblock %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+</head>
+<body>
+    <main class="container">
+        <nav class="navbar navbar-default  navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <h1 class="text-center display-4">
+                <strong class="text-success">Welcome to</strong>
+                <small class="text-muted sub-title">use the image classifier</small>
+            </h1>
+        </header>
+        {% block content %}{% endblock %}
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <footer class="text-center">
+            {% block footer %}
+                <p>© 2019&nbsp;&nbsp;nciaeml.club&nbsp;&nbsp;821778495@qq.com</p>
+            {% endblock %}
+            </footer>
+        </nav>
+
+    </main>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+<!--    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>-->
+</body>
+</html>
